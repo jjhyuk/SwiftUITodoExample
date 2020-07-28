@@ -11,7 +11,8 @@ import Foundation
 /// POP(Protocol Oriented Programming)
 protocol DataManagerProtocol {
     func fetchTodoList(includingCompleted: Bool) -> [Todo]
-    func add(todo: Todo)
+//    func add(todo: Todo)
+    func addTodo(title: String)
     func toggleIsCompleted(for todo: Todo)
 }
 
@@ -47,9 +48,15 @@ extension DataManager: DataManagerProtocol {
     
     /// Todo 가장 처음에 추가
     /// - Parameter todo: Todo
-    func add(todo: Todo) {
+//    func add(todo: Todo) {
+//        todos.insert(todo, at: 0)
+//    }
+    
+    func addTodo(title: String) {
+        let todo = Todo(title: title)
         todos.insert(todo, at: 0)
     }
+    
     
     /// 완료 여부 전환
     /// - Parameter todo: 변경을 원하는 Todo

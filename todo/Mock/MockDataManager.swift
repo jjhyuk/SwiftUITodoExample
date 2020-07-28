@@ -31,7 +31,11 @@ extension MockDataManager: DataManagerProtocol {
         includingCompleted ? todos : todos.filter { !$0.isCompleted }
     }
     
-    func add(todo: Todo) {
+//    func add(todo: Todo) {
+//        todos.insert(todo, at: 0)
+//    }
+    func addTodo(title: String) { // updated method
+        let todo = Todo(title: title)
         todos.insert(todo, at: 0)
     }
     

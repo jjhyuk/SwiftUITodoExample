@@ -18,6 +18,8 @@
 		942CA52724C8856500C806BA /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942CA52624C8856500C806BA /* TodoListViewModel.swift */; };
 		942CA52924C8882000C806BA /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942CA52824C8882000C806BA /* TodoListView.swift */; };
 		942CA52C24C888EB00C806BA /* MockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942CA52B24C888EB00C806BA /* MockDataManager.swift */; };
+		942CA53124D05FD300C806BA /* NewTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942CA53024D05FD300C806BA /* NewTodoViewModel.swift */; };
+		942CA53324D0649000C806BA /* NewTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942CA53224D0649000C806BA /* NewTodoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		942CA52624C8856500C806BA /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
 		942CA52824C8882000C806BA /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		942CA52B24C888EB00C806BA /* MockDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataManager.swift; sourceTree = "<group>"; };
+		942CA53024D05FD300C806BA /* NewTodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoViewModel.swift; sourceTree = "<group>"; };
+		942CA53224D0649000C806BA /* NewTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,15 +70,14 @@
 		94246FAF24C8653700788F84 /* todo */ = {
 			isa = PBXGroup;
 			children = (
+				942CA52F24D05FA900C806BA /* Model */,
+				942CA52E24D05FA100C806BA /* Managers */,
+				942CA52D24D05F9900C806BA /* Todo List */,
 				942CA52A24C888E000C806BA /* Mock */,
 				94246FC824C8689B00788F84 /* SupportingFiles */,
 				94246FB024C8653700788F84 /* AppDelegate.swift */,
 				94246FB224C8653700788F84 /* SceneDelegate.swift */,
 				94246FB424C8653700788F84 /* ContentView.swift */,
-				94246FC424C8679100788F84 /* Todo.swift */,
-				94246FC624C8688A00788F84 /* DataManager.swift */,
-				942CA52624C8856500C806BA /* TodoListViewModel.swift */,
-				942CA52824C8882000C806BA /* TodoListView.swift */,
 			);
 			path = todo;
 			sourceTree = "<group>";
@@ -104,6 +107,33 @@
 				942CA52B24C888EB00C806BA /* MockDataManager.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		942CA52D24D05F9900C806BA /* Todo List */ = {
+			isa = PBXGroup;
+			children = (
+				942CA52624C8856500C806BA /* TodoListViewModel.swift */,
+				942CA52824C8882000C806BA /* TodoListView.swift */,
+				942CA53024D05FD300C806BA /* NewTodoViewModel.swift */,
+				942CA53224D0649000C806BA /* NewTodoView.swift */,
+			);
+			path = "Todo List";
+			sourceTree = "<group>";
+		};
+		942CA52E24D05FA100C806BA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				94246FC624C8688A00788F84 /* DataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		942CA52F24D05FA900C806BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				94246FC424C8679100788F84 /* Todo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,8 +210,10 @@
 				94246FB124C8653700788F84 /* AppDelegate.swift in Sources */,
 				94246FC724C8688A00788F84 /* DataManager.swift in Sources */,
 				94246FB324C8653700788F84 /* SceneDelegate.swift in Sources */,
+				942CA53324D0649000C806BA /* NewTodoView.swift in Sources */,
 				94246FB524C8653700788F84 /* ContentView.swift in Sources */,
 				942CA52924C8882000C806BA /* TodoListView.swift in Sources */,
+				942CA53124D05FD300C806BA /* NewTodoViewModel.swift in Sources */,
 				942CA52724C8856500C806BA /* TodoListViewModel.swift in Sources */,
 				94246FC524C8679100788F84 /* Todo.swift in Sources */,
 				942CA52C24C888EB00C806BA /* MockDataManager.swift in Sources */,
