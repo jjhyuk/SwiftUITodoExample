@@ -20,6 +20,7 @@
 		942CA52C24C888EB00C806BA /* MockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942CA52B24C888EB00C806BA /* MockDataManager.swift */; };
 		942CA53124D05FD300C806BA /* NewTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942CA53024D05FD300C806BA /* NewTodoViewModel.swift */; };
 		942CA53324D0649000C806BA /* NewTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942CA53224D0649000C806BA /* NewTodoView.swift */; };
+		942CA53524D1AFE500C806BA /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942CA53424D1AFE500C806BA /* KeyboardResponder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		942CA52B24C888EB00C806BA /* MockDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataManager.swift; sourceTree = "<group>"; };
 		942CA53024D05FD300C806BA /* NewTodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoViewModel.swift; sourceTree = "<group>"; };
 		942CA53224D0649000C806BA /* NewTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoView.swift; sourceTree = "<group>"; };
+		942CA53424D1AFE500C806BA /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				94246FB024C8653700788F84 /* AppDelegate.swift */,
 				94246FB224C8653700788F84 /* SceneDelegate.swift */,
 				94246FB424C8653700788F84 /* ContentView.swift */,
+				942CA53424D1AFE500C806BA /* KeyboardResponder.swift */,
 			);
 			path = todo;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				94246FB124C8653700788F84 /* AppDelegate.swift in Sources */,
 				94246FC724C8688A00788F84 /* DataManager.swift in Sources */,
 				94246FB324C8653700788F84 /* SceneDelegate.swift in Sources */,
+				942CA53524D1AFE500C806BA /* KeyboardResponder.swift in Sources */,
 				942CA53324D0649000C806BA /* NewTodoView.swift in Sources */,
 				94246FB524C8653700788F84 /* ContentView.swift in Sources */,
 				942CA52924C8882000C806BA /* TodoListView.swift in Sources */,
