@@ -45,6 +45,7 @@ extension TodoListViewModel: TodoListViewModelProtocol {
     /// - Parameter todo: Todo 
     func toggleIsCompleted(for todo: Todo) {
         self.dataManager.toggleIsCompleted(for: todo)
+        fetchTodos()
     }
     
     

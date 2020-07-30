@@ -19,11 +19,11 @@ struct NewTodoView: View {
     
     @State var title = ""
     
-    private var isAddButtonDisabled: Bool { // 1
+    private var isAddButtonDisabled: Bool {
         title.isEmpty
     }
     
-    private var addButtonColor: Color { // 2
+    private var addButtonColor: Color {
         isAddButtonDisabled ? .gray : .blue
     }
     

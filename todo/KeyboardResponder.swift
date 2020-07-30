@@ -16,6 +16,8 @@ protocol KeyboardResponderProtocol {
 }
 
 final class KeyboardResponder: KeyboardResponderProtocol, ObservableObject {
+    
+    /// 값이 변경 되었을때, 뷰에게 즉각 알려준다. 
     @Published private(set) var currentHeight: CGFloat = 0
     private(set) var duration: TimeInterval = 0.3
     private var cancellableBag = Set<AnyCancellable>()

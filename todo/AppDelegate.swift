@@ -7,17 +7,43 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let center = UNUserNotificationCenter.current()
+        center.delegate = self
+        
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { (success, error) in
+            if let error = error {
+                // Error Handling
+            }
+            DispatchQueue.main.async {
+                application.registerForRemoteNotifications()
+            }
+        }
+        
         return true
     }
 
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        
+        let deviceTokenString = deviceToken.map { String(format: "%02x", $0) }.joined()
+        
+        print("------------------Push Token: \(deviceTokenString)---------------------------")
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print("Foreground")
+        
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

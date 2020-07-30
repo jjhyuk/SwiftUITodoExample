@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		941969B124D30F17003A5DF8 /* TodoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941969B024D30F17003A5DF8 /* TodoRow.swift */; };
 		94246FB124C8653700788F84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94246FB024C8653700788F84 /* AppDelegate.swift */; };
 		94246FB324C8653700788F84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94246FB224C8653700788F84 /* SceneDelegate.swift */; };
 		94246FB524C8653700788F84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94246FB424C8653700788F84 /* ContentView.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		941969B024D30F17003A5DF8 /* TodoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRow.swift; sourceTree = "<group>"; };
 		94246FAD24C8653700788F84 /* todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94246FB024C8653700788F84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94246FB224C8653700788F84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +42,7 @@
 		942CA53024D05FD300C806BA /* NewTodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoViewModel.swift; sourceTree = "<group>"; };
 		942CA53224D0649000C806BA /* NewTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoView.swift; sourceTree = "<group>"; };
 		942CA53424D1AFE500C806BA /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
+		94B28DAB24D2F1F0009BE7B8 /* todo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = todo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,7 @@
 		94246FAF24C8653700788F84 /* todo */ = {
 			isa = PBXGroup;
 			children = (
+				94B28DAB24D2F1F0009BE7B8 /* todo.entitlements */,
 				942CA52F24D05FA900C806BA /* Model */,
 				942CA52E24D05FA100C806BA /* Managers */,
 				942CA52D24D05F9900C806BA /* Todo List */,
@@ -119,6 +123,7 @@
 				942CA52824C8882000C806BA /* TodoListView.swift */,
 				942CA53024D05FD300C806BA /* NewTodoViewModel.swift */,
 				942CA53224D0649000C806BA /* NewTodoView.swift */,
+				941969B024D30F17003A5DF8 /* TodoRow.swift */,
 			);
 			path = "Todo List";
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 			files = (
 				94246FB124C8653700788F84 /* AppDelegate.swift in Sources */,
 				94246FC724C8688A00788F84 /* DataManager.swift in Sources */,
+				941969B124D30F17003A5DF8 /* TodoRow.swift in Sources */,
 				94246FB324C8653700788F84 /* SceneDelegate.swift in Sources */,
 				942CA53524D1AFE500C806BA /* KeyboardResponder.swift in Sources */,
 				942CA53324D0649000C806BA /* NewTodoView.swift in Sources */,
@@ -356,17 +362,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = todo/todo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = RTPYYR7K8H;
+				DEVELOPMENT_TEAM = 87WS4ARQXB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = todo/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jang.jinhyuk.todo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joycity.sdk.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Development_sdk_sample;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -376,17 +386,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = todo/todo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = RTPYYR7K8H;
+				DEVELOPMENT_TEAM = 87WS4ARQXB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = todo/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jang.jinhyuk.todo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joycity.sdk.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Development_sdk_sample;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

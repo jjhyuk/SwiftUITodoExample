@@ -14,6 +14,13 @@ struct TodoListView: View {
 
     @State private var isShowingAddNew: Bool = false
     
+    private var showCompletedButton: some View {
+        Button(action: {
+            self.viewModel.showCompleted.toggle()
+        }) {
+            return Image(systemName: self.viewModel.showCompleted ? "checkmark.circle.fill" : "checkmark.circle")
+        }
+    }
     
     private var addNewButton: some View {
         Button(action: {
@@ -26,11 +33,15 @@ struct TodoListView: View {
     var body: some View {
         NavigationView {
             List(self.viewModel.todos) { todo in
-                Text(todo.title)
+                Button(action: {
+                    self.viewModel.toggleIsCompleted(for: todo)
+                }) {
+                    TodoRow(todo: todo)
+                }
             }
             .navigationBarTitle(Text("Todo List"))
             /// 생성한 Button View를 네비게이션바에 추가
-            .navigationBarItems(trailing: self.addNewButton)
+            .navigationBarItems(leading: showCompletedButton, trailing: addNewButton) 
         }
         /// isShowingAddNew의 값에 따라 뷰 컨트롤러를 연다.
         .sheet(isPresented: $isShowingAddNew, onDismiss: {
